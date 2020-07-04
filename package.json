@@ -1,0 +1,54 @@
+{
+  "name": "@yueqing/lint",
+  "version": "0.0.0",
+  "description": "lint config",
+  "keywords": [
+    "eslint",
+    "prettier",
+    "stylelint"
+  ],
+  "homepage": "https://github.com/simonwong/lint#readme",
+  "bugs": {
+    "url": "https://github.com/simonwong/lint/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://github.com/simonwong/lint",
+  "author": "Simon <wsj_simon@163.com>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "start": "cd ./example && yarn start",
+    "build": "rm -rf ./dist && tsc --build tsconfig.json",
+    "lint": "npm run build && cd example && npm run lint",
+    "prepublishOnly": "npm run build && np --no-cleanup --yolo --no-publish --any-branch"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-airbnb-typescript": "^9.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-compat": "^3.8.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.18.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-markdown": "^1.0.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "eslint-plugin-unicorn": "^21.0.0",
+    "typescript": "^3.9.7"
+  },
+  "devDependencies": {
+    "np": "^6.3.2"
+  }
+}
