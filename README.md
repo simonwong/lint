@@ -1,5 +1,8 @@
 # lint
 
+![test](https://github.com/simonwong/lint/workflows/test/badge.svg)
+
+
 ## Usage
 
 **Install**
