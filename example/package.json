@@ -1,6 +1,5 @@
 {
   "name": "exapmle",
-  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^16.13.1",
@@ -11,7 +10,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "eslint --ext .js,.ts ./src"
+    "lint": "eslint --ext .js,.ts,.jsx,.tsx src/"
   },
   "browserslist": {
     "production": [
