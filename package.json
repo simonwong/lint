@@ -45,10 +45,11 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
-    "eslint-plugin-unicorn": "^21.0.0",
-    "typescript": "^3.9.7"
+    "eslint-plugin-unicorn": "^21.0.0"
   },
   "devDependencies": {
-    "np": "^6.3.2"
+    "@types/node": "^14.0.27",
+    "np": "^6.3.2",
+    "typescript": "^3.9.7"
   }
 }
