@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
+    "outDir": "lib",
     "module": "commonjs",
     "target": "es5",
     "lib": ["esnext", "dom"],
@@ -20,7 +20,7 @@
   "exclude": [
     "node_modules",
     "jest",
-    "dist",
+    "lib",
     "example/**"
   ]
 }

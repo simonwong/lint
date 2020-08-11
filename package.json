@@ -24,9 +24,9 @@
   ],
   "scripts": {
     "start": "cd ./example && yarn start",
-    "build": "rm -rf ./dist && tsc --build tsconfig.json",
-    "lint": "npm run build && cd example && npm run lint",
-    "prepublishOnly": "npm run build && np --no-cleanup --yolo --no-publish --any-branch"
+    "build": "rm -rf ./lib && tsc --build tsconfig.json && cp ./src/tsconfig.eslint.json ./lib",
+    "test": "yarn build && node ./scripts/lint",
+    "release": "yarn build && np --no-cleanup --yolo --any-branch"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^3.7.0",
