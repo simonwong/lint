@@ -1,0 +1,26 @@
+@import '~@/styles/variables.less';
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.06);
+
+  .loading {
+    font-size: 50px;
+    animation: rotateAn 0.8s linear infinite;
+  }
+}
+
+@keyframes rotateAn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
