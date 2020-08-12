@@ -6,7 +6,14 @@ class ClassComp extends React.Component {
   }
 
   componentDidMount () {
-    console.log('ClassComp componentDidMount')
+    this.setNumber()
+  }
+
+
+  setNumber = () => {
+    this.setState({
+      number: 1
+    })
   }
 
   render () {

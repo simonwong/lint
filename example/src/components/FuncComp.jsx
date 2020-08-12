@@ -2,12 +2,25 @@ import React, { useEffect, useState } from 'react'
 
 function FuncComp () {
   const [number, setNumber] = useState(0)
+
+  const retureRadeom = () => {
+    Math.random()
+  }
+
   useEffect(() => {
-    console.log('useEffect FuncComp')
+    retureRadeom()
     return () => {
-      console.log('useEffect unmount FuncComp')
+      retureRadeom()
     }
   }, [number])
+
+  const getDouble = num => {
+    return num * 2
+  }
+
+  useEffect(() => {
+    getDouble(number)
+  })
 
   const handleSetNumber = () => {
     setNumber(number + 1)

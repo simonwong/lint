@@ -1,12 +1,7 @@
-/** @format */
-
-const strictEslint = require('./eslint');
-const softyEslint = require('./softyEslint');
+const eslint = require('./eslint')
 
 module.exports = {
   // stylelint,
   // prettier,
-  strictEslint,
-  eslint: softyEslint,
-  default: softyEslint,
+  eslint,
 };
