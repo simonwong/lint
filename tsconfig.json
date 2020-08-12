@@ -1,19 +1,16 @@
 {
   "compilerOptions": {
-    "outDir": "lib",
-    "module": "commonjs",
     "target": "es5",
+    "module": "commonjs",
     "lib": ["esnext", "dom"],
+    "outDir": "lib",
     "baseUrl": ".",
-    "jsx": "react",
+
+    "strict": true,
+
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "experimentalDecorators": true,
-    "strict": true,
-    "declaration": true
+    "noUnusedLocals": true
   },
   "include": [
     "src"
