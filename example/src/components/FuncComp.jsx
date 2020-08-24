@@ -14,7 +14,7 @@ function FuncComp () {
     }
   }, [number])
 
-  const getDouble = num => {
+  const getDouble = (num) => {
     return num * 2
   }
 

@@ -5,7 +5,7 @@ import BaseLoading from './BaseLoading'
 import styles from './index.less'
 
 class PageLoading extends BaseLoading {
-  constructor() {
+  constructor () {
     super()
     this.div = document.createElement('div')
     this.LoadingNode = (
