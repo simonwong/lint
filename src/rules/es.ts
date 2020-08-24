@@ -2,22 +2,20 @@
  * 🚀 http://eslint.cn/
  */
 module.exports = {
-  'generator-star-spacing': 0,
-  'function-paren-newline': 0,
-  'linebreak-style': 0,
-  // Too restrictive, writing ugly code to defend against a very unlikely scenario: https://eslint.org/docs/rules/no-prototype-builtins
-  'no-prototype-builtins': 'off',
-  'sort-imports': 0,
-  // Use function hoisting to improve code readability
-  'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
-  // Makes no sense to allow type inferrence for expression parameters, but require typing the response
-  // Conflict with prettier
-  'arrow-body-style': 0,
-  'arrow-parens': 0,
-  'object-curly-newline': 0,
-  'implicit-arrow-linebreak': 0,
+  // 封号
+  'semi': [2, 'never', { "beforeStatementContinuationChars": "always" }],
+  // 参数括号
+  'arrow-parens': [2, "as-needed", { "requireForBlockBody": true }],
+  // 方法名与参数的空格
+  'space-before-function-paren': [2, "always"],
+  // 禁止直接使用 prototype => off
+  'no-prototype-builtins': 0,
+  // 操作符换行 => off
   'operator-linebreak': 0,
-  'eslint-comments/no-unlimited-disable': 0,
-  'no-param-reassign': 2,
-  'space-before-function-paren': 0,
+  // 实参不允许修改 => off
+  'no-param-reassign': 0,
+  // i++ => off
+  'no-plusplus': 0,
+  // 直接使用全局变量 => off
+  'no-restricted-globals': 0,
 }

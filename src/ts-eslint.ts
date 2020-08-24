@@ -3,14 +3,16 @@ const importRules = require('./rules/import')
 const jsxRules = require('./rules/jsx')
 const unicornRules = require('./rules/unicorn')
 const esRules = require('./rules/es')
+const typescriptRules = require('./rules/typescript')
 
 module.exports = {
-  parser: 'babel-eslint',
+  parser: '@typescript-eslint/parser',
   extends: [
-    'airbnb',
+    'airbnb-typescript',
     'airbnb/hooks',
     'prettier',
     'prettier/react',
+    'prettier/@typescript-eslint',
   ],
   plugins: ['eslint-comments', 'jest', 'unicorn', 'react-hooks'],
   env: {
@@ -25,6 +27,7 @@ module.exports = {
     ...importRules,
     ...unicornRules,
     ...esRules,
+    ...typescriptRules,
     ...reactRules,
     ...jsxRules,
   },
