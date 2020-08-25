@@ -1,10 +1,10 @@
+/**
+ * 🚀 https://github.com/benmosher/eslint-plugin-import
+ */
 module.exports = {
-  /**
-   * 🚀 https://github.com/benmosher/eslint-plugin-import
-   */
-  'import/no-cycle': 0,
-  'import/prefer-default-export': 'off',
-  'import/no-default-export': [0, 'camel-case'],
+  // 禁止循环引用
+  'import/no-cycle': 2,
+  // 对一些特殊路径解析
   'import/no-unresolved': [
     2,
     {
@@ -13,21 +13,8 @@ module.exports = {
       commonjs: true,
     },
   ],
-  'import/order': 'warn',
-  'import/no-extraneous-dependencies': [
-    2,
-    {
-      optionalDependencies: true,
-      devDependencies: [
-        '**/tests/**.{ts,js,jsx,tsx}',
-        '**/_test_/**.{ts,js,jsx,tsx}',
-        '/mock/**/**.{ts,js,jsx,tsx}',
-        '**/**.test.{ts,js,jsx,tsx}',
-        '**/_mock.{ts,js,jsx,tsx}',
-        '**/example/**.{ts,js,jsx,tsx}',
-        '**/examples/**.{ts,js,jsx,tsx}',
-      ],
-    },
-  ],
-  'import/extensions': 0,
+  // 顺序的 import
+  'import/order': 2,
+  // 必须优先 export default
+  'import/prefer-default-export': 0,
 }

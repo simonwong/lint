@@ -1,6 +1,6 @@
 {
   "name": "@yueqing/lint",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "lint config",
   "keywords": [
     "eslint",
@@ -23,9 +23,9 @@
     "lib"
   ],
   "scripts": {
-    "start": "cd ./example && yarn start",
-    "build": "rm -rf ./lib && tsc --build tsconfig.json && cp ./src/tsconfig.eslint.json ./lib",
-    "test": "yarn build && cd example && yarn lint",
+    "start": "yarn --cwd ./example start",
+    "build": "rm -rf ./lib && tsc --build tsconfig.json",
+    "test": "yarn build && yarn --cwd ./example lint",
     "release": "yarn build && np --no-cleanup --yolo --any-branch"
   },
   "dependencies": {
@@ -45,11 +45,18 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^4.0.8",
-    "eslint-plugin-unicorn": "^21.0.0"
+    "eslint-plugin-unicorn": "^21.0.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-css-modules": "^2.2.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
+    "stylelint-order": "^4.1.0"
   },
   "devDependencies": {
     "@types/node": "^14.0.27",
     "np": "^6.4.0",
-    "typescript": "^3.9.7"
+    "typescript": "^4.0.2"
   }
 }

@@ -6,5 +6,10 @@ export default defineConfig({
   },
   routes: [
     { path: '/', component: '@/pages/index' },
+    { path: '/about', component: '@/pages/about' },
   ],
+  dva: {
+    immer: true,
+    hmr: false,
+  },
 });

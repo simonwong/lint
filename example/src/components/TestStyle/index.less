@@ -1,0 +1,35 @@
+@import "~@/styles/variables.less";
+
+.container {
+  position: relative;
+  color: aquamarine;
+
+
+  .content {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    left: 100px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    height: 200px;
+    text-align: center;
+
+    > div {
+      flex: 1;
+      border: 1px solid #aaa;
+
+      &:nth-child(odd) {
+        background: fuchsia;
+      }
+      &:nth-child(even) {
+        background: aqua;
+      }
+    }
+  }
+
+  .in {
+    display: inline;
+  }
+}

@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "lib": ["esnext", "dom"],
+    "target": "ES5",
+    "module": "CommonJS",
+    "lib": ["ESNext"],
     "outDir": "lib",
     "baseUrl": ".",
 
     "strict": true,
 
-    "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
-    "noUnusedLocals": true
+    "moduleResolution": "Node",
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
   },
   "include": [
     "src"

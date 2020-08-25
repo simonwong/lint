@@ -6,7 +6,7 @@ import styles from './index.less'
 const ParagraphEllipsis = ({ children, className, limit, ...props }) => {
   const [expandable, setExpandable] = useState(false)
 
-  function handleChangeExpandable() {
+  function handleChangeExpandable () {
     setExpandable(!expandable)
   }
 
