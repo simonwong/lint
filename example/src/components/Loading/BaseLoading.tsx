@@ -8,15 +8,13 @@ class BaseLoading {
 
   LoadingNode: React.ReactElement
 
-  constructor () {
+  constructor() {
     this.isLoading = false
     this.div = document.querySelector('#root') as Element
-    this.LoadingNode = (
-      <span>Icon</span>
-    )
+    this.LoadingNode = <span>Icon</span>
   }
 
-  show () {
+  show() {
     if (this.isLoading) {
       return
     }
@@ -26,7 +24,7 @@ class BaseLoading {
     ReactDOM.render(this.LoadingNode, this.div)
   }
 
-  hide () {
+  hide() {
     if (!this.isLoading) {
       return
     }

@@ -1,4 +1,4 @@
-import { defineConfig } from 'umi';
+import { defineConfig } from 'umi'
 
 export default defineConfig({
   nodeModulesTransform: {
@@ -12,4 +12,4 @@ export default defineConfig({
     immer: true,
     hmr: false,
   },
-});
+})

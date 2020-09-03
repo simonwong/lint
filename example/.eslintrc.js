@@ -4,6 +4,5 @@ module.exports = {
     project: './tsconfig.eslint.json',
     createDefaultProgram: true,
   },
-  rules: {
-  },
+  rules: {},
 }

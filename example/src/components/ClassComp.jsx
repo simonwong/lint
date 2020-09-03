@@ -2,29 +2,26 @@ import React from 'react'
 
 class ClassComp extends React.Component {
   state = {
-    number: 0
+    number: 0,
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.setNumber()
   }
 
-
   setNumber = () => {
     this.setState({
-      number: 1
+      number: 1,
     })
   }
 
-  render () {
+  render() {
     const { number } = this.state
 
     return (
       <div>
-        <h1>
-          It&apos;s a class Comp
-        </h1>
-        <p>{ number }</p>
+        <h1>It&apos;s a class Comp</h1>
+        <p>{number}</p>
       </div>
     )
   }

@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './index.less'
 
-function TestStyle () {
+function TestStyle() {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
