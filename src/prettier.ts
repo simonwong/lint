@@ -2,5 +2,8 @@ module.exports = {
   singleQuote: true,
   trailingComma: 'all',
   proseWrap: 'never',
-  endOfLine: 'lf'
+  endOfLine: 'lf',
+  semi: false,
+  jsxBracketSameLine: false,
+  arrowParens: 'avoid',
 };
