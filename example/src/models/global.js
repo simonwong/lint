@@ -5,23 +5,21 @@ export default {
       applyOrder: 0,
     },
   },
-  effects: {
-
-  },
+  effects: {},
   reducers: {
-    setData (state, { payload }) {
+    setData(state, { payload }) {
       return {
         ...state,
         ...payload,
       }
     },
-    setScrollHeight (state, { payload }) {
+    setScrollHeight(state, { payload }) {
       return {
         ...state,
         scrollHeight: {
           ...state.scrollHeight,
           ...payload,
-        }
+        },
       }
     },
   },

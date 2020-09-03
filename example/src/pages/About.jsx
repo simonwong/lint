@@ -10,27 +10,15 @@ const About = ({ form }) => {
       <h1 className={styles.title}>about</h1>
 
       <Form>
-        <Form.Item
-          label="Username"
-          name="username"
-        >
+        <Form.Item label="Username" name="username">
           {getFieldDecorator('username', {
             rules: [{ required: true, message: 'Please input your username!' }],
-          })(
-            <Input
-              placeholder="Username"
-            />,
-          )}
+          })(<Input placeholder="Username" />)}
         </Form.Item>
-        <Form.Item
-          label="自定义"
-          name="custom"
-        >
+        <Form.Item label="自定义" name="custom">
           {getFieldDecorator('custom', {
             rules: [],
-          })(
-            <CustomInput />,
-          )}
+          })(<CustomInput />)}
         </Form.Item>
       </Form>
     </div>

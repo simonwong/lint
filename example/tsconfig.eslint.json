@@ -5,11 +5,5 @@
     "jsx": "react",
     "resolveJsonModule": true
   },
-  "include": [
-    "**/*.js",
-    "**/*.ts",
-    "**/*.jsx",
-    "**/*.d.ts",
-    "**/*.tsx"
-  ]
+  "include": ["**/*.js", "**/*.ts", "**/*.jsx", "**/*.d.ts", "**/*.tsx"]
 }

@@ -11,10 +11,16 @@ module.exports = {
     'airbnb-typescript',
     'airbnb/hooks',
     'prettier',
-    'prettier/react',
+    // 'prettier/react',
     'prettier/@typescript-eslint',
   ],
-  plugins: ['eslint-comments', 'jest', 'unicorn', 'react-hooks'],
+  plugins: [
+    'prettier',
+    'eslint-comments',
+    'jest',
+    'unicorn',
+    'react-hooks',
+  ],
   env: {
     browser: true,
     node: true,
@@ -24,6 +30,7 @@ module.exports = {
     jasmine: true,
   },
   rules: {
+    'prettier/prettier': 'error',
     ...importRules,
     ...unicornRules,
     ...esRules,

@@ -1,5 +1,5 @@
-const fabric = require('../lib');
+const fabric = require('../lib')
 
 module.exports = {
   ...fabric.prettier,
-};
+}

@@ -2,6 +2,8 @@
  * 🚀 https://github.com/yannickcr/eslint-plugin-react
  */
 module.exports = {
+  // props 空格
+  'react/jsx-indent-props': [2, 2],
   // props 参数换行
   'react/jsx-max-props-per-line': [2, {
     maximum: 1,
