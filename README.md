@@ -115,10 +115,10 @@ yarn add husky lint-staged -D
 {
   // ...
   "scripts": {
-    "lint": "yarn lint:js & yarn lint:style",
+    "lint": "yarn lint:js && yarn lint:style",
     "lint:js": "eslint --ext .js,.ts,jsx,tsx --format=pretty ./src",
     "lint:style": "stylelint \"src/**/*.less\" --syntax less",
-    "lint:fix": "eslint --fix --ext .js,.ts,jsx,tsx --format=pretty ./src & stylelint --fix \"src/**/*.less\" --syntax less"
+    "lint:fix": "eslint --fix --ext .js,.ts,jsx,tsx --format=pretty ./src && stylelint --fix \"src/**/*.less\" --syntax less"
   },
   "husky": {
     "hooks": {
@@ -194,4 +194,4 @@ trim_trailing_whitespace = false
 
 ## ps
 
-机灵一点，所有的配置方式都不是固定的，根据项目灵活调整
+所有的配置方式都不是固定的，根据项目灵活调整
