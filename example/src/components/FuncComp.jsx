@@ -14,9 +14,7 @@ function FuncComp() {
     }
   }, [number])
 
-  const getDouble = num => {
-    return num * 2
-  }
+  const getDouble = num => num * 2
 
   useEffect(() => {
     getDouble(number)
