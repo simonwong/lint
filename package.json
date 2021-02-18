@@ -1,6 +1,6 @@
 {
   "name": "@yueqing/lint",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "lint config",
   "keywords": [
     "eslint",
