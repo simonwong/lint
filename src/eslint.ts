@@ -5,7 +5,7 @@ const unicornRules = require('./rules/unicorn')
 const esRules = require('./rules/es')
 
 module.exports = {
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   extends: [
     'airbnb',
     'airbnb/hooks',

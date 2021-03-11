@@ -6,14 +6,12 @@ module.exports = {
     'stylelint-config-rational-order'
   ],
   plugins: [
-    'stylelint-declaration-block-no-ignored-properties',
     'stylelint-scss'
   ],
   rules: {
     'function-url-quotes': 'always',
     // iconfont
     'font-family-no-missing-generic-family-keyword': null,
-    'plugin/declaration-block-no-ignored-properties': true,
     'unit-no-unknown': [true, {
       ignoreUnits: ['rpx']
     }],
