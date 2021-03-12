@@ -5,12 +5,11 @@ const unicornRules = require('./rules/unicorn')
 const esRules = require('./rules/es')
 
 module.exports = {
-  parser: '@babel/eslint-parser',
+  parser: 'babel-eslint',
   extends: [
     'airbnb',
     'airbnb/hooks',
     'prettier',
-    // 'prettier/react',
   ],
   plugins: [
     'prettier',

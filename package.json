@@ -29,8 +29,8 @@
     "release": "yarn build && np --no-cleanup --yolo --any-branch"
   },
   "dependencies": {
-    "@babel/eslint-parser": "^7.13.10",
     "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "babel-eslint": "^10.1.0",
     "eslint": "^7.21.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",
