@@ -19,6 +19,7 @@ module.exports = {
     'unicorn',
     'react-hooks',
   ],
+  ignorePatterns: ['.eslintrc.js'],
   env: {
     browser: true,
     node: true,
