@@ -115,15 +115,11 @@ yarn add husky lint-staged -D
 {
   // ...
   "scripts": {
+    "prepare": "husky install",
     "lint": "yarn lint:js && yarn lint:style",
     "lint:js": "eslint --ext .js,.ts,.jsx,.tsx --format=pretty ./src",
     "lint:style": "stylelint \"src/**/*.less\" --syntax less",
     "lint:fix": "eslint --fix --ext .js,.ts,.jsx,.tsx --format=pretty ./src && stylelint --fix \"src/**/*.less\" --syntax less"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "**/*.{js,ts,jsx,tsx}": [
@@ -136,6 +132,9 @@ yarn add husky lint-staged -D
   }
 }
 ```
+
+执行 `npm run prepare`
+执行 `npx husky add .husky/pre-commit "npx lint-staged"`
 
 ### 搭配 VSCode 插件食用
 
