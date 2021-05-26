@@ -1,7 +1,6 @@
 const reactRules = require('./rules/react')
 const importRules = require('./rules/import')
 const jsxRules = require('./rules/jsx')
-const unicornRules = require('./rules/unicorn')
 const esRules = require('./rules/es')
 const typescriptRules = require('./rules/typescript')
 
@@ -16,7 +15,6 @@ module.exports = {
     'prettier',
     'eslint-comments',
     'jest',
-    'unicorn',
     'react-hooks',
   ],
   ignorePatterns: ['.eslintrc.js'],
@@ -31,7 +29,6 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     ...importRules,
-    ...unicornRules,
     ...esRules,
     ...typescriptRules,
     ...reactRules,
