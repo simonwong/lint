@@ -15,6 +15,11 @@ module.exports = {
     'unit-no-unknown': [true, {
       ignoreUnits: ['rpx']
     }],
+    'at-rule-no-unknown': [true, {
+      ignoreAtRules: ['extends', 'tailwind']
+    }]
   },
-  ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
+  // https://stylelint.io/user-guide/configure#ignorefiles
+  // The ignoreFiles property is stripped from extended configs: only the root-level config can ignore files.
+  // ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
 };
