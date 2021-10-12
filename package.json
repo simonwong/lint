@@ -29,7 +29,7 @@
     "release": "yarn build && np --no-cleanup --yolo --any-branch"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.27.0",
     "eslint-config-airbnb": "^18.2.1",
