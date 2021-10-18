@@ -25,8 +25,8 @@
   "scripts": {
     "start": "yarn --cwd ./example start",
     "build": "rm -rf ./lib && tsc --build tsconfig.json",
-    "test": "yarn build && yarn --cwd ./example lint",
-    "release": "yarn build && np --no-cleanup --yolo --any-branch"
+    "test": "yarn build && node ./fixtures/test",
+    "release": "yarn test && np --no-cleanup --yolo --any-branch"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.15.8",
