@@ -27,8 +27,5 @@ jobs:
       - name: Install Dependencies
         run: yarn --frozen-lockfile
 
-      - name: Install Example Dependencies
-        run: cd example && yarn --frozen-lockfile
-
-      - name: Test
+      - name: Run Test
         run: yarn test
