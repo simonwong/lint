@@ -4,7 +4,7 @@ const jsxRules = require('./rules/jsx')
 const esRules = require('./rules/es')
 
 module.exports = {
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   extends: [
     'airbnb',
     'airbnb/hooks',
@@ -30,6 +30,19 @@ module.exports = {
     ...esRules,
     ...reactRules,
     ...jsxRules,
+  },
+  parserOptions: {
+    babelOptions: {
+      presets: [
+        '@babel/preset-env',
+        '@babel/preset-react',
+      ],
+      plugins: [
+        ['@babel/plugin-proposal-decorators', { legacy: true }],
+        ['@babel/plugin-proposal-class-properties', { loose: true }],
+      ],
+    },
+    requireConfigFile: false
   },
 };
 
