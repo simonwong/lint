@@ -7,6 +7,7 @@ const typescriptRules = require('./rules/typescript')
 module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
+    'airbnb',
     'airbnb-typescript',
     'airbnb/hooks',
     'prettier',
