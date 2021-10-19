@@ -4,6 +4,6 @@ module.exports = {
   proseWrap: 'never',
   endOfLine: 'lf',
   semi: false,
-  jsxBracketSameLine: false,
+  bracketSameLine: false,
   arrowParens: 'avoid',
-};
+}
