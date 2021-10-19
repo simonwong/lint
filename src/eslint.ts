@@ -44,6 +44,6 @@ module.exports = {
     },
     requireConfigFile: false
   },
-};
+}
 
-export {};
+export {}
