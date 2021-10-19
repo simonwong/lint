@@ -1,5 +1,8 @@
 # lint
 
+An extensible shared Configuration collection for eslint, prettier and stylelint.
+
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/simonwong/lint)
 ![test](https://github.com/simonwong/lint/workflows/test/badge.svg)
 
 
@@ -188,7 +191,3 @@ insert_final_newline = true
 [*.md]
 trim_trailing_whitespace = false
 ```
-
-## ps
-
-所有的配置方式都不是固定的，根据项目灵活调整
