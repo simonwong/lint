@@ -35,6 +35,6 @@ module.exports = {
     ...reactRules,
     ...jsxRules,
   },
-};
+}
 
-export {};
+export {}

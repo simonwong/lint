@@ -8,4 +8,4 @@ module.exports = {
   prettier,
   eslint,
   tsEslint,
-};
+}

@@ -6,7 +6,7 @@ module.exports = {
     'stylelint-config-rational-order'
   ],
   plugins: [
-    'stylelint-scss'
+    'stylelint-scss',
   ],
   rules: {
     'function-url-quotes': 'always',
@@ -22,4 +22,4 @@ module.exports = {
   // https://stylelint.io/user-guide/configure#ignorefiles
   // The ignoreFiles property is stripped from extended configs: only the root-level config can ignore files.
   // ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
-};
+}
