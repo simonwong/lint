@@ -61,14 +61,14 @@
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.21.0"
+    "stylelint-scss": "^3.21.0",
+    "typescript": "^4.4.4"
   },
   "devDependencies": {
     "@types/node": "^16.11.1",
     "@types/react": "^17.0.30",
     "np": "^7.5.0",
-    "react": "^17.0.2",
-    "typescript": "^4.4.4"
+    "react": "^17.0.2"
   },
   "engines": {
     "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
