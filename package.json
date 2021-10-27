@@ -23,10 +23,10 @@
     "lib"
   ],
   "scripts": {
-    "start": "yarn --cwd ./example start",
+    "preinstall": "npx only-allow pnpm",
     "build": "rm -rf ./lib && tsc --build tsconfig.json",
-    "test": "yarn build && node ./fixtures/test",
-    "release": "yarn test && np --no-cleanup --yolo --any-branch"
+    "test": "npm run build && node ./fixtures/test",
+    "release": "npm run test && np --no-cleanup --yolo --any-branch --no-yarn"
   },
   "dependencies": {
     "@babel/core": "^7.15.8",
