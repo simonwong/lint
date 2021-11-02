@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/no-extraneous-dependencies */
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 const DemoComponent = () => {
   const [data, setData] = useState([])

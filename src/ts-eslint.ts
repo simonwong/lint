@@ -18,6 +18,10 @@ module.exports = {
     'jest',
     'react-hooks',
   ],
+  parserOptions: {
+    // for react new JSX transform
+    jsxPragma: null,
+  },
   ignorePatterns: ['.eslintrc.js'],
   env: {
     browser: true,

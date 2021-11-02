@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/no-extraneous-dependencies */
-import React, { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 
 const DemoComponent = () => {
   const [number] = useState(2)
