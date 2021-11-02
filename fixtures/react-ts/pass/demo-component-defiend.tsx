@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/no-extraneous-dependencies */
-import React, { useState, useEffect } from 'react'
+import { FC, useState, useEffect } from 'react'
 
 interface DemoComponentProps {
   num?: number
@@ -10,7 +10,7 @@ type DemoData = {
   value: string
 }
 
-const DemoComponent: React.FC<DemoComponentProps> = ({ num }) => {
+const DemoComponent: FC<DemoComponentProps> = ({ num }) => {
   const [data, setData] = useState<DemoData[]>(null)
 
   useEffect(() => {

@@ -24,4 +24,8 @@ module.exports = {
   'react/state-in-constructor': 0,
   // 循环不能使用 index 作为 key => off
   'react/no-array-index-key': 0,
+
+  // for react new JSX transform
+  'react/react-in-jsx-scope': 0,
+  'react/jsx-uses-react': 0,
 }
