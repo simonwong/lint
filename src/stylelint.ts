@@ -3,7 +3,7 @@ module.exports = {
     'stylelint-config-standard',
     'stylelint-config-css-modules',
     'stylelint-config-prettier',
-    'stylelint-config-rational-order'
+    'stylelint-config-recess-order',
   ],
   plugins: [
     'stylelint-scss',
@@ -19,7 +19,5 @@ module.exports = {
       ignoreAtRules: ['extends', 'tailwind']
     }]
   },
-  // https://stylelint.io/user-guide/configure#ignorefiles
-  // The ignoreFiles property is stripped from extended configs: only the root-level config can ignore files.
-  // ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
+  ignoreFiles: ['**/node_modules/**', '**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
 }

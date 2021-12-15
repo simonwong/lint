@@ -12,7 +12,6 @@ module.exports = {
   ],
   plugins: [
     'prettier',
-    'eslint-comments',
     'jest',
     'react-hooks',
   ],
