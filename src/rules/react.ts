@@ -28,4 +28,11 @@ module.exports = {
   // for react new JSX transform
   'react/react-in-jsx-scope': 0,
   'react/jsx-uses-react': 0,
+  'react/function-component-definition': [
+    2,
+    {
+      namedComponents: 'arrow-function',
+      unnamedComponents: 'arrow-function'
+    },
+  ],
 }
