@@ -23,7 +23,6 @@
     "lib"
   ],
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "build": "rm -rf ./lib && tsc --build tsconfig.json",
     "test": "npm run build && node ./fixtures/test",
     "release": "npm run test && np --no-cleanup --yolo --any-branch --no-yarn"
