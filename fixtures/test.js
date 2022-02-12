@@ -58,7 +58,7 @@ const runTestInTargetFiles = async (name, targetFiles, lintInstance) => {
       logInfo(`\n    -- ${fileObj.name}   ${testPass ? PASS_ICON : FAIL_ICON}`)
       if (!testPass) {
         TEST_RESULT = false
-        logError(...passLintRes.messages.map(msg => `\n${msg.message}`))
+        logError(...passLintRes.messages.map(msg => `\n${msg.line},${msg.column}: ${msg.message}`))
       }
     }
 
