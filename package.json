@@ -1,6 +1,6 @@
 {
   "name": "@yueqing/lint",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "An extensible shared Configuration collection for eslint, prettier and stylelint",
   "keywords": [
     "eslint",
