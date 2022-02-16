@@ -33,12 +33,12 @@ module.exports = {
   parserOptions: {
     babelOptions: {
       presets: [
-        '@babel/preset-env',
-        '@babel/preset-react',
+        require.resolve('@babel/preset-env'),
+        require.resolve('@babel/preset-react'),
       ],
       plugins: [
-        ['@babel/plugin-proposal-decorators', { legacy: true }],
-        ['@babel/plugin-proposal-class-properties', { loose: true }],
+        [require.resolve('@babel/plugin-proposal-decorators'), { legacy: true }],
+        [require.resolve('@babel/plugin-proposal-class-properties'), { loose: true }],
       ],
     },
     requireConfigFile: false
