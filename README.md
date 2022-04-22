@@ -2,7 +2,6 @@
 
 An extensible shared Configuration collection for eslint, prettier and stylelint.
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/simonwong/lint)
 ![test](https://github.com/simonwong/lint/workflows/test/badge.svg)
 
 
