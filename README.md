@@ -15,6 +15,14 @@ npm install @yueqing/lint -S
 yarn add @yueqing/lint
 ```
 
+**Quick Create config file**
+
+```shell
+npx yq-lint
+# or
+yarn yq-lint
+```
+
 **Use in project**
 
 ```
@@ -57,10 +65,12 @@ module.exports = {
 }
 ```
 
-`parserOptions.project` 配置是必须的，指向你项目中的 `tsconfig.json`, 或者如下，再创建一个 `tsconfig.eslint.json` 。一般更建议再创建一个，他们 include 的内容不同。
+`parserOptions.project` 配置是必须的，指向你项目中的 `tsconfig.json`, 或者再创建一个 `tsconfig.eslint.json` 。一般更建议再创建一个，他们 include 的内容不同。
+
+
+**tsconfig.eslint.json**
 
 ```json
-// 也可以 "extends": "./tsconfig.json"
 {
   "compilerOptions": {
     "baseUrl": ".",
@@ -113,7 +123,6 @@ yarn add husky lint-staged -D
 
 ```json
 {
-  // ...
   "scripts": {
     "prepare": "husky install",
     "lint": "yarn lint:js && yarn lint:style",
@@ -136,41 +145,20 @@ yarn add husky lint-staged -D
 执行 `npm run prepare`
 执行 `npx husky add .husky/pre-commit "npx lint-staged"`
 
-### 搭配 VSCode 插件食用
+### 搭配 VSCode 插件
 
 安装 `eslint` `stylelint` `prettier`  `EditorConfig for VS Code` 插件
 
 
 **vscode `config.json`**
 
+该配置可以在保存文件时自动格式化文件
+
 ```json
-// 必备，保存文件时自动格式化文件
 "editor.codeActionsOnSave": {
   "source.fixAll.eslint": true,
   "source.fixAll.stylelint": true,
 },
-
-// 进阶，配置文件默认的格式化工具，开始丧心病狂
-"editor.defaultFormatter": "esbenp.prettier-vscode",
-"[javascript]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"[javascriptreact]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"[typescript]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"[typescriptreact]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"[json]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"[graphql]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-
 ```
 
 **在项目中加入配置 `.editorconfig`**
