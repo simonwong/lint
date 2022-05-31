@@ -19,8 +19,12 @@
   "author": "Simon <wsj_simon@163.com>",
   "license": "MIT",
   "main": "lib/index.js",
+  "bin": {
+    "yq-lint": "./bin/yq-lint.js"
+  },
   "files": [
-    "lib"
+    "lib",
+    "bin"
   ],
   "scripts": {
     "build": "rm -rf ./lib && tsc --build tsconfig.json",
