@@ -6,17 +6,8 @@ const typescriptRules = require('./rules/typescript')
 
 module.exports = {
   parser: '@typescript-eslint/parser',
-  extends: [
-    'airbnb',
-    'airbnb-typescript',
-    'airbnb/hooks',
-    'prettier',
-  ],
-  plugins: [
-    'prettier',
-    'jest',
-    'react-hooks',
-  ],
+  extends: ['airbnb', 'airbnb-typescript', 'airbnb/hooks', 'prettier'],
+  plugins: ['prettier', 'jest', 'react-hooks'],
   parserOptions: {
     // for react new JSX transform
     jsxPragma: null,

@@ -5,16 +5,8 @@ const esRules = require('./rules/es')
 
 module.exports = {
   parser: '@babel/eslint-parser',
-  extends: [
-    'airbnb',
-    'airbnb/hooks',
-    'prettier',
-  ],
-  plugins: [
-    'prettier',
-    'jest',
-    'react-hooks',
-  ],
+  extends: ['airbnb', 'airbnb/hooks', 'prettier'],
+  plugins: ['prettier', 'jest', 'react-hooks'],
   env: {
     browser: true,
     node: true,
@@ -37,11 +29,17 @@ module.exports = {
         require.resolve('@babel/preset-react'),
       ],
       plugins: [
-        [require.resolve('@babel/plugin-proposal-decorators'), { legacy: true }],
-        [require.resolve('@babel/plugin-proposal-class-properties'), { loose: true }],
+        [
+          require.resolve('@babel/plugin-proposal-decorators'),
+          { legacy: true },
+        ],
+        [
+          require.resolve('@babel/plugin-proposal-class-properties'),
+          { loose: true },
+        ],
       ],
     },
-    requireConfigFile: false
+    requireConfigFile: false,
   },
 }
 

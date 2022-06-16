@@ -24,7 +24,7 @@ const tsConfig = {
   },
 }
 
-`
+`,
 }
 
 const prettierConfig = {
@@ -35,7 +35,7 @@ module.exports = {
   ...fabric.prettier,
 }
 
-`
+`,
 }
 
 // const esConfigList = [
@@ -43,10 +43,7 @@ module.exports = {
 //   prettierConfig
 // ]
 
-const tsConfigList = [
-  tsConfig,
-  prettierConfig
-]
+const tsConfigList = [tsConfig, prettierConfig]
 
 const rootPath = process.cwd()
 
@@ -56,7 +53,7 @@ const writeConfig = async () => {
     if (fs.existsSync(filePath)) {
       console.log(`${file} already exists, skipping creation`)
     } else {
-      fs.writeFile(filePath, template, (e) => {
+      fs.writeFile(filePath, template, e => {
         if (e) {
           throw e
         }

@@ -2,15 +2,18 @@
  * 🚀 https://github.com/typescript-eslint/typescript-eslint
  */
 module.exports = {
-  '@typescript-eslint/member-delimiter-style': [2, {
-    multiline: {
-      delimiter: 'none',
-      requireLast: false
+  '@typescript-eslint/member-delimiter-style': [
+    2,
+    {
+      multiline: {
+        delimiter: 'none',
+        requireLast: false,
+      },
+      singleline: {
+        delimiter: 'semi',
+        requireLast: false,
+      },
     },
-    singleline: {
-      delimiter: 'semi',
-      requireLast: false
-    },
-  }],
+  ],
   '@typescript-eslint/no-non-null-assertion': 2,
 }

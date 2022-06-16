@@ -5,15 +5,21 @@ module.exports = {
   // props 空格
   'react/jsx-indent-props': [2, 2],
   // props 参数换行
-  'react/jsx-max-props-per-line': [2, {
-    maximum: 1,
-    when: 'multiline'
-  }],
+  'react/jsx-max-props-per-line': [
+    2,
+    {
+      maximum: 1,
+      when: 'multiline',
+    },
+  ],
   // 自闭合标签对其位置
-  'react/jsx-closing-bracket-location': [2, {
-    'nonEmpty': 'tag-aligned',
-    'selfClosing': 'tag-aligned'
-  }],
+  'react/jsx-closing-bracket-location': [
+    2,
+    {
+      nonEmpty: 'tag-aligned',
+      selfClosing: 'tag-aligned',
+    },
+  ],
   // 必须写 PropTypes => off
   'react/prop-types': 0,
   // 不能单行子元素/表达式 => off
@@ -32,7 +38,7 @@ module.exports = {
     2,
     {
       namedComponents: 'arrow-function',
-      unnamedComponents: 'arrow-function'
+      unnamedComponents: 'arrow-function',
     },
   ],
 }
