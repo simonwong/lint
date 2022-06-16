@@ -29,6 +29,8 @@
   "scripts": {
     "build": "rm -rf ./lib && tsc --build tsconfig.json",
     "test": "npm run build && node ./fixtures/test",
+    "lint": "eslint --ext .js,.ts --format=pretty ./src",
+    "lint:fix": "eslint --fix --ext .js,.ts --format=pretty ./src",
     "release": "npm run test && np --no-cleanup --yolo --any-branch --no-yarn"
   },
   "dependencies": {
