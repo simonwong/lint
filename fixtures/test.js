@@ -2,6 +2,7 @@ const path = require('path')
 const fs = require('fs')
 
 const { ESLint } = require('eslint')
+const stylelint = require('stylelint')
 
 const { logError, logTitle, logInfo } = require('./helpers')
 
@@ -112,9 +113,34 @@ const testTsConfig = async () => {
   )
 }
 
+/* =========== style 测试 ========= */
+const testStyleConfig = async () => {
+  logTitle(`\nStyle config test result: `)
+
+  try {
+    const data = await stylelint.lint({
+      config: {
+        extends: [path.join(ROOT_PATH, '../lib/stylelint.js')],
+      },
+      files: `${path.join(ROOT_PATH, '/css')}/*`,
+    })
+    for (const item of data.results) {
+      if (item.warnings.length > 0) {
+        TEST_RESULT = false
+        logInfo(`\n    -- ${item.source}   ${FAIL_ICON}`)
+      } else {
+        logInfo(`\n    -- ${item.source}   ${PASS_ICON}`)
+      }
+    }
+  } catch (e) {
+    console.error(e.stack);
+  }
+}
+
 const runTest = async () => {
   await testEsConfig()
   await testTsConfig()
+  await testStyleConfig()
 
   if (!TEST_RESULT) {
     logError('\nPlease Check Your Test Cases!\n')

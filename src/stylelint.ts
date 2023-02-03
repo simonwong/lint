@@ -16,6 +16,12 @@ module.exports = {
         ignoreUnits: ['rpx'],
       },
     ],
+    'function-no-unknown': [
+      true,
+      {
+        ignoreFunctions: ['constant'],
+      },
+    ],
     'at-rule-no-unknown': [
       true,
       {
