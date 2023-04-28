@@ -2,7 +2,6 @@ module.exports = {
   extends: [
     'stylelint-config-standard',
     'stylelint-config-css-modules',
-    'stylelint-config-prettier',
     'stylelint-config-recess-order',
   ],
   plugins: ['stylelint-scss'],
@@ -22,12 +21,9 @@ module.exports = {
         ignoreFunctions: ['constant'],
       },
     ],
-    'at-rule-no-unknown': [
-      true,
-      {
-        ignoreAtRules: ['extends', 'tailwind'],
-      },
-    ],
+    // recommended rules
+    'at-rule-no-unknown': null,
+    'scss/at-rule-no-unknown': true,
   },
   ignoreFiles: [
     '**/node_modules/**',

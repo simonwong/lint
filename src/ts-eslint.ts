@@ -21,6 +21,14 @@ module.exports = {
     jest: true,
     jasmine: true,
   },
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
+    },
+    'import/resolver': {
+      typescript: true,
+    },
+  },
   rules: {
     'prettier/prettier': 'error',
     ...importRules,
