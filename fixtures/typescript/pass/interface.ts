@@ -1,6 +1,6 @@
 export type DemoReturn = {
-  c: any
-  d: Map<Object, Function>
+  c: unknown
+  d: Map<string, () => void>
 }
 
 export interface DemoInterFace {
