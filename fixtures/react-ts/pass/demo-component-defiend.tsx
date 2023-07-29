@@ -11,7 +11,7 @@ type DemoData = {
 }
 
 const DemoComponent: FC<DemoComponentProps> = ({ num }) => {
-  const [data, setData] = useState<DemoData[]>(null)
+  const [data, setData] = useState<DemoData[] | null>(null)
 
   useEffect(() => {
     setData([
@@ -26,11 +26,7 @@ const DemoComponent: FC<DemoComponentProps> = ({ num }) => {
   return (
     <div>
       <h1>{num}</h1>
-      <ul>
-        {data?.map(item => (
-          <li key={item.value}>{item.value}</li>
-        ))}
-      </ul>
+      <ul>{data?.map(item => <li key={item.value}>{item.value}</li>)}</ul>
     </div>
   )
 }

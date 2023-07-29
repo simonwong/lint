@@ -47,7 +47,7 @@ const tsConfigList = [tsConfig, prettierConfig]
 
 const rootPath = process.cwd()
 
-const writeConfig = async () => {
+const writeConfig = () => {
   for (const { file, template } of tsConfigList) {
     const filePath = path.join(rootPath, file)
     if (fs.existsSync(filePath)) {

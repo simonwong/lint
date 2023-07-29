@@ -2,7 +2,7 @@
 import { useState, useEffect, DependencyList } from 'react'
 
 type UseFetchReturn = {
-  result: Response
+  result: Response | null
   loading: boolean
 }
 type UseFetch = (
@@ -17,7 +17,7 @@ export const useFetch: UseFetch = (
   deps: DependencyList,
 ) => {
   const [loading, setLoading] = useState(false)
-  const [result, setResult] = useState<Response>(null)
+  const [result, setResult] = useState<Response | null>(null)
 
   useEffect(() => {
     setLoading(true)
@@ -25,6 +25,7 @@ export const useFetch: UseFetch = (
 
     fetch(url, { ...config, signal: abortController.signal })
       .then(res => setResult(res))
+      .catch(() => {})
       .finally(() => setLoading(false))
 
     return () => abortController.abort()
