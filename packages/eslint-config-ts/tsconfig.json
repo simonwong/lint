@@ -16,6 +16,6 @@
     "outDir": "lib",
     "baseUrl": "."
   },
-  "include": ["index.js"],
+  "include": ["index.js", "types/*.ts"],
   "exclude": ["node_modules", "lib"]
 }
