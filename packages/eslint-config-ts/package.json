@@ -1,0 +1,36 @@
+{
+  "name": "@yueqing/eslint-config-ts",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "An shared TS Configuration for eslint",
+  "keywords": [
+    "eslint"
+  ],
+  "homepage": "https://github.com/simonwong/lint#readme",
+  "bugs": {
+    "url": "https://github.com/simonwong/lint/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://github.com/simonwong/lint",
+  "author": "Simon <wsj_simon@163.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "eslint": ">= 9"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.11.1",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint__js": "^8.42.3",
+    "eslint": "^9.12.0",
+    "eslint-config-prettier": "^9.1.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.8.0"
+  }
+}

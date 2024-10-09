@@ -1,0 +1,27 @@
+{
+  "name": "@yueqing/prettier-config",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "An shared prettier configuration",
+  "keywords": [
+    "prettier"
+  ],
+  "homepage": "https://github.com/simonwong/lint#readme",
+  "bugs": {
+    "url": "https://github.com/simonwong/lint/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://github.com/simonwong/lint",
+  "author": "Simon <wsj_simon@163.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "prettier": ">=3"
+  }
+}
