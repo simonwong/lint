@@ -1,6 +1,6 @@
 {
   "name": "@yueqing/eslint-config-ts",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "description": "An shared TS Configuration for eslint",
   "keywords": [
