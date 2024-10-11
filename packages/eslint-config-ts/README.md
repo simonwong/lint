@@ -8,17 +8,10 @@
 //@ts-check
 import eslintConfig from '@yueqing/eslint-config-ts';
 
-export default [
-  ...eslintConfig,
-  {
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.eslint.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
-  },
-];
+export default eslintConfig({
+  project: ['./tsconfig.eslint.json'],
+  rootDir: import.meta.dirname,
+});
 ```
 
 tsconfig.eslint.json:
@@ -38,4 +31,21 @@ tsconfig.eslint.json:
     "source.fixAll.eslint": "explicit"
   }
 }
+```
+
+## 添加 tailwindcss 的配置
+
+```js
+//@ts-check
+
+import eslintConfig from '@yueqing/eslint-config-ts';
+import tailwindcssConfig from '@yueqing/eslint-config-ts/tailwindcss-config';
+
+export default eslintConfig(
+  {
+    project: ['./tsconfig.eslint.json'],
+    rootDir: import.meta.dirname,
+  },
+  [...tailwindcssConfig]
+);
 ```
