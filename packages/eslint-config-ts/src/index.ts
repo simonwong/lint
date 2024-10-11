@@ -1,5 +1,3 @@
-// @ts-check
-
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import reactPlugin from 'eslint-plugin-react';
@@ -9,14 +7,22 @@ import prettierConfig from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
 import globals from 'globals';
 
+import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint';
+
 const tsAndTsxFile = '**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}';
 
-/**
- * @param {{ project: string[] | boolean | string | null, rootDir: string }} params - 函数参数
- */
-export default ({ project, rootDir }) => {
+export default (
+  {
+    project,
+    rootDir,
+  }: {
+    project: string[] | boolean | string | null;
+    rootDir: string;
+  },
+  morConfigs: tseslint.ConfigWithExtends[] = []
+) => {
   const reactConfig = [
-    /** @type {import('@typescript-eslint/utils/ts-eslint').FlatConfig.Config} */ ({
+    {
       files: [tsAndTsxFile],
       ...reactPlugin.configs.flat.recommended,
       languageOptions: {
@@ -26,7 +32,7 @@ export default ({ project, rootDir }) => {
           ...globals.browser,
         },
       },
-    }),
+    },
     {
       files: [tsAndTsxFile],
       ...jsxA11y.flatConfigs.recommended,
@@ -38,9 +44,7 @@ export default ({ project, rootDir }) => {
         },
       },
     },
-    /** @type {import('@typescript-eslint/utils/ts-eslint').FlatConfig.Config} */ (
-      reactPlugin.configs.flat['jsx-runtime']
-    ),
+    reactPlugin.configs.flat['jsx-runtime'],
     {
       files: [tsAndTsxFile],
       plugins: {
@@ -50,24 +54,23 @@ export default ({ project, rootDir }) => {
         ...reactHooksPlugin.configs.recommended.rules,
       },
     },
-  ];
-
-  return tseslint.config(
-    js.configs.recommended,
-    importPlugin.flatConfigs.recommended,
-    importPlugin.flatConfigs.typescript,
-    ...reactConfig,
-    ...tseslint.configs.recommendedTypeChecked,
-    prettierConfig,
     {
-      languageOptions: {
-        parserOptions: {
-          // projectService: true,
-          project: project,
-          tsconfigRootDir: rootDir,
+      settings: {
+        react: {
+          version: 'detect',
         },
       },
     },
+    {
+      rules: {
+        'react/prop-types': 'off',
+      },
+    },
+  ] as FlatConfig.ConfigArray;
+
+  const importConfig = [
+    importPlugin.flatConfigs.recommended,
+    importPlugin.flatConfigs.typescript,
     {
       settings: {
         'import/parsers': {
@@ -82,11 +85,50 @@ export default ({ project, rootDir }) => {
       },
     },
     {
-      settings: {
-        react: {
-          version: 'detect',
+      rules: {
+        'import/order': [
+          'error',
+          {
+            groups: [
+              'builtin',
+              'external',
+              'type',
+              'internal',
+              'index',
+              'sibling',
+              'parent',
+              'object',
+            ],
+          },
+        ],
+      },
+    },
+  ] as FlatConfig.ConfigArray;
+
+  const tsConfig = [
+    ...tseslint.configs.recommendedTypeChecked,
+    {
+      languageOptions: {
+        parserOptions: {
+          // projectService: true,
+          project: project,
+          tsconfigRootDir: rootDir,
         },
       },
-    }
+    },
+    {
+      rules: {
+        '@typescript-eslint/unbound-method': 'off',
+      },
+    },
+  ] as FlatConfig.ConfigArray;
+
+  return tseslint.config(
+    js.configs.recommended,
+    ...importConfig,
+    ...reactConfig,
+    ...tsConfig,
+    prettierConfig,
+    ...morConfigs
   );
 };

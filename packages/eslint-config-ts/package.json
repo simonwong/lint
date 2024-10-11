@@ -4,7 +4,8 @@
   "type": "module",
   "description": "An shared TS Configuration for eslint",
   "keywords": [
-    "eslint"
+    "eslint",
+    "Share Configurations"
   ],
   "homepage": "https://github.com/simonwong/lint#readme",
   "bugs": {
@@ -17,9 +18,10 @@
   "repository": "https://github.com/simonwong/lint",
   "author": "Simon <wsj_simon@163.com>",
   "license": "MIT",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf lib && tsc --project tsconfig.json"
   },
   "peerDependencies": {
     "eslint": ">= 9"
