@@ -1,13 +1,12 @@
 import js from '@eslint/js';
-import tseslint from 'typescript-eslint';
+import tseslint, { ConfigWithExtends } from 'typescript-eslint';
 import reactPlugin from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import prettierConfig from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
 import globals from 'globals';
-
-import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint';
+import '@typescript-eslint/utils';
 
 const tsAndTsxFile = '**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}';
 
@@ -19,7 +18,7 @@ export default (
     project: string[] | boolean | string | null;
     rootDir: string;
   },
-  morConfigs: tseslint.ConfigWithExtends[] = []
+  morConfigs: ConfigWithExtends[] = []
 ) => {
   const reactConfig = [
     {
@@ -66,7 +65,7 @@ export default (
         'react/prop-types': 'off',
       },
     },
-  ] as FlatConfig.ConfigArray;
+  ] as ConfigWithExtends[];
 
   const importConfig = [
     importPlugin.flatConfigs.recommended,
@@ -103,7 +102,7 @@ export default (
         ],
       },
     },
-  ] as FlatConfig.ConfigArray;
+  ] as ConfigWithExtends[];
 
   const tsConfig = [
     ...tseslint.configs.recommendedTypeChecked,
@@ -121,7 +120,7 @@ export default (
         '@typescript-eslint/unbound-method': 'off',
       },
     },
-  ] as FlatConfig.ConfigArray;
+  ] as ConfigWithExtends[];
 
   return tseslint.config(
     js.configs.recommended,
