@@ -8,7 +8,10 @@ import importPlugin from 'eslint-plugin-import';
 import globals from 'globals';
 import '@typescript-eslint/utils';
 
-const tsAndTsxFile = '**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}';
+const tsFiles = ['js', 'mjs', 'cjs', 'ts'];
+const tsxFiles = ['jsx', 'mjsx', 'tsx', 'mtsx'];
+const tsFile = `**/*.{${[...tsFiles].join(',')}}`;
+const tsAndTsxFile = `**/*.{${[...tsFiles, ...tsxFiles].join(',')}}`;
 
 export default (
   {
@@ -122,12 +125,24 @@ export default (
     },
   ] as ConfigWithExtends[];
 
+  const nodeConfig = [
+    {
+      files: [tsFile],
+      languageOptions: {
+        globals: {
+          ...globals.node,
+        },
+      },
+    },
+  ] satisfies ConfigWithExtends[];
+
   return tseslint.config(
     js.configs.recommended,
     ...importConfig,
     ...reactConfig,
     ...tsConfig,
     prettierConfig,
+    ...nodeConfig,
     ...morConfigs
   );
 };
