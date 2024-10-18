@@ -1,5 +1,11 @@
 # @yueqing/eslint-config-ts
 
+## 0.0.2
+
+### Patch Changes
+
+- [#284](https://github.com/simonwong/lint/pull/284) [`311ab40`](https://github.com/simonwong/lint/commit/311ab40feccfa1e93e14d7f911884dedc69715c5) Thanks [@simonwong](https://github.com/simonwong)! - add node env
+
 ## 0.0.1
 
 ### Patch Changes
